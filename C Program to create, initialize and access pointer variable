@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+    char ch;
+    char *pch;
+    pch=&ch;
+    ch='B';
+    printf("The value of ch: %c\n", ch);
+    printf("Address of ch: %p\n", &ch);
+    printf("The value of ch: %c\n", *pch);
+    printf("Address of ch: %p\n", pch);
+    
+}
