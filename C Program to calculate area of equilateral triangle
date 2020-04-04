@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int triangle_side;
+    float triangle_area, temp;
+    printf("Enter side of triangle: ");
+    scanf("%d", &triangle_side);
+    temp= sqrt(3)/4;
+    triangle_area= temp * triangle_side *triangle_side;
+    printf("The area is %f", triangle_area);
+}
