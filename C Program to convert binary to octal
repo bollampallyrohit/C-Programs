@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include<math.h>
+int binarytooctal(long binarynum)
+{
+    int decimalnum=0, octalnum=0, i=0;
+    while(binarynum!=0)
+    {
+        binarynum= binarynum / 10;
+        decimalnum= decimalnum + (binarynum % 10) * pow(2,i);
+        i++;
+    }
+    i =1;
+    while (decimalnum!=0)
+    {
+        decimalnum= decimalnum / 10;
+        octalnum= octalnum + (decimalnum % 8) * i;
+        i = i* 10;
+    }
+    return octalnum;
+}
+int main()
+{
+    long binarynum;
+    printf("enter binary num");
+    scanf("%ld", &binarynum);
+    printf("The octal num is %ld", binarytooctal(binarynum));
+    return 0;
+}
