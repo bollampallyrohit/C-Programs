@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include<math.h>
+long octaltodecimal(int octalnum)
+{
+    int temp=0, decimalnum=0;
+    while(octalnum!=0)
+    {
+        octalnum= octalnum / 10;
+        decimalnum= decimalnum + (octalnum % 10) * pow(8,temp);
+        temp++;
+    }
+    return decimalnum;
+}
+int main()
+{
+    int octalnum;
+    printf("enter octal num");
+    scanf("%d", &octalnum);
+    printf("The decimal num is %ld", octaltodecimal(octalnum));
+    return 0;
+}
